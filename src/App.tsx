@@ -15,16 +15,16 @@ const App = () => {
           if (entry.isIntersecting) {
             if (entry.target === heroRef.current) {
               setCurrentPage(0)
-              console.log('Hero section in view')
+              //console.log('Hero section in view')
             } else if (entry.target === aboutRef.current) {
               setCurrentPage(1)
-              console.log('About Me section in view')
+              //console.log('About Me section in view')
             }
           }
         })
       },
       {
-        threshold: 0.7,
+        threshold: 0.5,
         rootMargin: '-10% 0px -10% 0px'
       }
     )
