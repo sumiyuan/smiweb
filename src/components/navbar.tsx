@@ -6,10 +6,29 @@ const Navbar = ({ Page, heroRef, aboutRef }: {
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
-      ref.current.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
+      const element = ref.current
+      const elementPosition = element.offsetTop - 100 // Account for navbar height
+      const startPosition = window.pageYOffset
+      const distance = elementPosition - startPosition
+      const duration = 300 // 0.5 seconds
+      let start: number | null = null
+      
+      const easeInOutQuad = (t: number, b: number, c: number, d: number) => {
+        t /= d / 2
+        if (t < 1) return c / 2 * t * t + b
+        t--
+        return -c / 2 * (t * (t - 2) - 1) + b
+      }
+      
+      const animation = (currentTime: number) => {
+        if (start === null) start = currentTime
+        const timeElapsed = currentTime - start
+        const run = easeInOutQuad(timeElapsed, startPosition, distance, duration)
+        window.scrollTo(0, run)
+        if (timeElapsed < duration) requestAnimationFrame(animation)
+      }
+      
+      requestAnimationFrame(animation)
     }
   }
 
