@@ -7,7 +7,7 @@ const Navbar = ({ Page, heroRef, aboutRef }: {
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
       const element = ref.current
-      const elementPosition = element.offsetTop - 100 // Account for navbar height
+      const elementPosition = element.offsetTop - 10// Account for navbar height
       const startPosition = window.pageYOffset
       const distance = elementPosition - startPosition
       const duration = 300 // 0.5 seconds
@@ -33,7 +33,7 @@ const Navbar = ({ Page, heroRef, aboutRef }: {
   }
 
   return (
-    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
+    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 hidden md:block">
       <div className="bg-white/10 backdrop-blur-md rounded-full px-8 py-4 border border-indigo-300/20 shadow-lg">
         <div className="flex items-center justify-between min-w-[600px]">
           {/* Left side - Name Box */}
@@ -60,12 +60,7 @@ const Navbar = ({ Page, heroRef, aboutRef }: {
             <button 
               className={`transition-colors duration-200 font-normal cursor-pointer ${Page === 2 ? 'text-indigo-300' : 'text-white hover:text-white/80'}`}
             >
-              Services
-            </button>
-            <button 
-              className={`transition-colors duration-200 font-normal cursor-pointer ${Page === 3 ? 'text-indigo-300' : 'text-white hover:text-white/80'}`}
-            >
-              Portfolio
+              Experiences
             </button>
             <button 
               className={`transition-colors duration-200 font-normal cursor-pointer ${Page === 4 ? 'text-indigo-300' : 'text-white hover:text-white/80'}`}
