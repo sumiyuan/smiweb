@@ -1,8 +1,10 @@
-const Navbar = ({ Page, heroRef, aboutRef }: { 
+const Navbar = ({ Page, heroRef, aboutRef, experienceRef }: { 
   Page: number; 
   heroRef: React.RefObject<HTMLDivElement | null>; 
   aboutRef: React.RefObject<HTMLDivElement | null>; 
+  experienceRef: React.RefObject<HTMLDivElement | null>;
 }) => {
+  //console.log('Navbar Page value:', Page)
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
@@ -58,9 +60,10 @@ const Navbar = ({ Page, heroRef, aboutRef }: {
               About
             </button>
             <button 
+              onClick={() => scrollToSection(experienceRef)}
               className={`transition-colors duration-200 font-normal cursor-pointer ${Page === 2 ? 'text-indigo-300' : 'text-white hover:text-white/80'}`}
             >
-              Experiences
+              Experience
             </button>
             <button 
               className={`transition-colors duration-200 font-normal cursor-pointer ${Page === 4 ? 'text-indigo-300' : 'text-white hover:text-white/80'}`}
