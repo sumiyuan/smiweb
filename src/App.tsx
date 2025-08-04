@@ -3,6 +3,7 @@ import Hero from './components/hero'
 import AboutMe from './components/AboutMe'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
+import Projects from './components/Projects'
 import { useState, useEffect, useRef } from 'react'
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
   const heroRef = useRef<HTMLDivElement>(null)
   const aboutRef = useRef<HTMLDivElement>(null)
   const experienceRef = useRef<HTMLDivElement>(null)
+  const projectsRef = useRef<HTMLDivElement>(null)
   const contactRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -17,25 +19,29 @@ const App = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            if (entry.target === heroRef.current) {
-              setCurrentPage(0)
-              //console.log('Hero section in view')
+            console.log('Section in view:', entry.target)
+            if (entry.target === experienceRef.current) {
+              setCurrentPage(2)
+              console.log('experience section in view')
+            } else if (entry.target === projectsRef.current) {
+              setCurrentPage(2)
+              console.log('projects section in view')
             } else if (entry.target === aboutRef.current) {
               setCurrentPage(1)
-              //console.log('About Me section in view')
-            } else if (entry.target === experienceRef.current) {
-              setCurrentPage(2)
-              //console.log('Experience section in view')
+              console.log('About Me section in view')
+            } else if (entry.target === heroRef.current) {
+              setCurrentPage(0)
+              console.log('hero section in view')
             } else if (entry.target === contactRef.current) {
               setCurrentPage(3)
-              //console.log('Contact section in view')
+              console.log('Contact section in view')
             }
           }
         })
       },
       {
-        threshold: 0.5,
-        rootMargin: '-10% 0px -10% 0px'
+        threshold: [0, 0.25, 0.5],
+        rootMargin: '0px 0px -50% 0px'
       }
     )
 
@@ -47,6 +53,9 @@ const App = () => {
     }
     if (experienceRef.current) {
       observer.observe(experienceRef.current)
+    }
+    if (projectsRef.current) {
+      observer.observe(projectsRef.current)
     }
     if (contactRef.current) {
       observer.observe(contactRef.current)
@@ -61,6 +70,9 @@ const App = () => {
       if (experienceRef.current) {
         observer.unobserve(experienceRef.current)
       }
+      if (projectsRef.current) {
+        observer.unobserve(projectsRef.current)
+      }
       if (contactRef.current) {
         observer.unobserve(contactRef.current)
       }
@@ -73,6 +85,7 @@ const App = () => {
       <Hero ref={heroRef}/>
       <AboutMe ref={aboutRef}/>
       <Experience ref={experienceRef}/>
+      <Projects ref={projectsRef}/>
       <Contact ref={contactRef}/>
     </div>
   )

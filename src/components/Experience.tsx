@@ -3,69 +3,37 @@ import JobExperience from './JobExperience'
 
 const Experience = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div ref={ref} className='flex flex-col items-center justify-center min-h-screen w-full pt-20 px-4'>
-      <h1 className='text-4xl font-bold mb-8 text-indigo-300'>Experience</h1>
+    <div ref={ref} className='flex flex-col items-center justify-center min-h-screen w-full pt-20 px-4 py-16'>
+      <h1 className='text-4xl font-bold mb-12 text-indigo-300'>Experience</h1>
       
-      <div className='flex flex-col items-center justify-center w-full max-w-4xl'>
+      <div className='flex flex-col items-center justify-center w-full max-w-4xl space-y-8'>
         <JobExperience
           name="Hong Kong Applied Science and Technology Research Institute"
           jobTitle="Machine Learning Intern"
           date="May 2024 - August 2024"
           location="Hong Kong SAR, China"
           responsibilities={[
-            "Developed and maintained full-stack web applications using React, Node.js, and TypeScript",
-            "Collaborated with cross-functional teams to implement new features and improve existing functionality",
-            "Optimized database queries and improved application performance by 25%",
-            "Participated in code reviews and contributed to team documentation"
+            "Led a team of 6 interns to design, implement and benchmark SAM1, SAM2 image segmentation model to detect metallic deformation defects in car parts using Python, Transformer and Pytorch",
+            "Achieved an accuracy of 82% IoU comparing output mask to ground truth mask utilizing Adam optimizer and a custom dice cross entropy loss function for training",
+            "Implemented an algorithm in Verilog to activate a camera and lights using an internal clock with the Vivado design suite on a Zynq 7400 series Xilinx Z7020 development board",
+            "Initiated an after work rock climbing initiative that involved 20+ employees to experience bouldering"
           ]}
         />
         
         <JobExperience
           name="University of Toronto RoboCup Team"
           jobTitle="Software Lead"
-          date="January 2023 - Present"
+          date="October 2022 - April 2025"
           location="Toronto, Canada"
           responsibilities={[
-            "Built responsive web applications using modern JavaScript frameworks",
-            "Implemented RESTful APIs and integrated third-party services",
-            "Worked with version control systems and participated in agile development processes",
-            "Debugged and resolved technical issues across multiple platforms"
+            "Led a 8 person software team to implement behavioral and scoring algorithms for the robot",
+            "Rewritten and implemented main strategy code as a behavioral tree with PyTree and ROS1",
+            "Designed and implemented 2D testing environment for strategy development and software debugging with PyGame",
+            "Debugged robot operation strategies with Python and OpenCV within a simulated environment using WeBots",
+            "Represented UofT internationally by competing and placing 4th overall at the 2023 RoboCup"
           ]}
+          githubLink='https://github.com/utra-robosoccer/soccerbot'
         />
-      </div>
-
-      <h1 className='text-4xl font-bold mb-8 text-indigo-300'>Projects</h1>
-
-      <div className='flex flex-col items-center justify-center w-full max-w-4xl'>
-      <div className='flex flex-col items-center justify-center w-full max-w-4xl'>
-        <JobExperience
-          name="Hong Kong Applied Science and Technology Research Institute"
-          jobTitle="Machine Learning Intern"
-          date="May 2024 - August 2024"
-          location="Hong Kong SAR, China"
-          responsibilities={[
-            "Developed and maintained full-stack web applications using React, Node.js, and TypeScript",
-            "Collaborated with cross-functional teams to implement new features and improve existing functionality",
-            "Optimized database queries and improved application performance by 25%",
-            "Participated in code reviews and contributed to team documentation"
-          ]}
-        />
-        
-        <JobExperience
-          name="University of Toronto RoboCup Team"
-          jobTitle="Software Lead"
-          date="January 2023 - Present"
-          location="Toronto, Canada"
-          responsibilities={[
-            "Built responsive web applications using modern JavaScript frameworks",
-            "Implemented RESTful APIs and integrated third-party services",
-            "Worked with version control systems and participated in agile development processes",
-            "Debugged and resolved technical issues across multiple platforms"
-          ]}
-          liveLink="https://www.robocup.ca/"
-          githubLink="https://github.com/toronto-robotics"
-        />
-      </div>
       </div>
     </div>
   )
