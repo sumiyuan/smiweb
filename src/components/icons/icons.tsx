@@ -1,7 +1,6 @@
 import GithubIcon from './github'
 import LinkedinIcon from './linkedin'
 import InstagramIcon from './instagram'
-import GmailIcon from './gmail'
 
 const icons = ({ names }: { names: string }) => {
   switch (names) {
@@ -11,8 +10,6 @@ const icons = ({ names }: { names: string }) => {
       return <GithubIcon />
     case "instagram":
       return <InstagramIcon />
-    case "gmail":
-      return <GmailIcon />
     default:
       return null
   }
