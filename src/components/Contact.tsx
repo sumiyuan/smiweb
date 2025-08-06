@@ -23,14 +23,14 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
     const sendEmail = async (_prev: string | null, formData: FormData) => {
         try {
             await emailjs.send(
-                import.meta.env.SERVICE_ID,
-                import.meta.env.TEMPLATE_ID,
+                import.meta.env.VITE_SERVICE_ID,
+                import.meta.env.VITE_TEMPLATE_ID,
                 {
                     from_name: formData.get('name'),
                     from_email: formData.get('email'),
                     message: formData.get('message')
                 },
-                import.meta.env.PUBLIC_KEY
+                import.meta.env.VITE_PUBLIC_KEY
             )
             return 'Email sent successfully'
         } catch (error) {
@@ -44,7 +44,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div ref={ref} className="h-screen w-full flex flex-col items-center justify-center">
       <h1 className="text-4xl font-bold text-indigo-300">Let's Connect</h1>
-      <p className="text-lg text-white">
+      <p className="text-lg text-white px-4">
         Feel free to reach out to me via email or connect with me on LinkedIn for a coffee chat.
       </p>
 
@@ -86,10 +86,6 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
                 />
             </div>
             <SubmitButton />
-
-            <h1 className='text-white'>{import.meta.env.SERVICE_ID}</h1>
-            <h1 className='text-white'>{import.meta.env.TEMPLATE_ID}</h1>
-            <h1 className='text-white'>{import.meta.env.PUBLIC_KEY}</h1>
         </form>
         
     </div>
