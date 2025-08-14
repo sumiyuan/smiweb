@@ -1,4 +1,4 @@
-import React, { forwardRef, useActionState, useState } from 'react'
+import { forwardRef, useActionState } from 'react'
 import Icons from './icons/icons'
 import emailjs from '@emailjs/browser'
 import { useFormStatus } from 'react-dom'
@@ -18,7 +18,7 @@ function SubmitButton() {
     );
   }
 
-const Contact = forwardRef<HTMLDivElement>((props, ref) => {
+const Contact = forwardRef<HTMLDivElement>((_, ref) => {
 
     const sendEmail = async (_prev: string | null, formData: FormData) => {
         try {
@@ -39,7 +39,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
         }
     }
 
-    const [statusMsg, formAction] = useActionState(sendEmail, null)
+    const [, formAction] = useActionState(sendEmail, null)
 
   return (
     <div ref={ref} className="h-screen w-full flex flex-col items-center justify-center">

@@ -1,7 +1,7 @@
 import Icons from './icons/icons'
 import { forwardRef } from 'react'
 
-const Hero = forwardRef<HTMLDivElement>((props, ref) => {
+const Hero = forwardRef<HTMLDivElement>((_, ref) => {
 
   return (
     <div ref={ref} className='h-screen w-full pt-20 relative'>

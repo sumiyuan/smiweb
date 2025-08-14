@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 
-const AboutMe = forwardRef<HTMLDivElement>((props, ref) => {
+const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
 
   return (
     <div ref={ref} className='h-screen w-full pt-20 relative'>

@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react'
+import { forwardRef } from 'react'
 import JobExperience from './JobExperience'
 
-const Projects = forwardRef<HTMLDivElement>((props, ref) => {
+const Projects = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <div className='flex flex-col items-center justify-center min-h-screen w-full pt-10 px-4 py-16' ref={ref}>
         <h1 className='text-4xl font-bold mb-12 text-indigo-300'>Projects</h1>

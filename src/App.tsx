@@ -4,7 +4,6 @@ import AboutMe from './components/AboutMe'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
-import DarkVeil from './components/DarkVeil'
 import { useState, useEffect, useRef } from 'react'
 
 const App = () => {
