@@ -19,22 +19,22 @@ const App = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log('Section in view:', entry.target)
+            //console.log('Section in view:', entry.target)
             if (entry.target === experienceRef.current) {
               setCurrentPage(2)
-              console.log('experience section in view')
+              //console.log('experience section in view')
             } else if (entry.target === projectsRef.current) {
               setCurrentPage(2)
-              console.log('projects section in view')
+              //console.log('projects section in view')
             } else if (entry.target === aboutRef.current) {
               setCurrentPage(1)
-              console.log('About Me section in view')
+              //console.log('About Me section in view')
             } else if (entry.target === heroRef.current) {
               setCurrentPage(0)
-              console.log('hero section in view')
+              //console.log('hero section in view')
             } else if (entry.target === contactRef.current) {
               setCurrentPage(3)
-              console.log('Contact section in view')
+              //console.log('Contact section in view')
             }
           }
         })
