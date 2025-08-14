@@ -4,6 +4,7 @@ import AboutMe from './components/AboutMe'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
+import DarkVeil from './components/DarkVeil'
 import { useState, useEffect, useRef } from 'react'
 
 const App = () => {
@@ -81,6 +82,9 @@ const App = () => {
 
   return (
     <div className='font-montserrat bg-slate-950 min-h-screen'>
+      {/* <div style={{ width: '100%', height: '600px', position: 'relative'}}>
+        <DarkVeil bgColor="bg-slate-950"/>
+      </div> */}
       <Navbar Page={currentPage} heroRef={heroRef} aboutRef={aboutRef} experienceRef={experienceRef} contactRef={contactRef}/>
       <Hero ref={heroRef}/>
       <AboutMe ref={aboutRef}/>

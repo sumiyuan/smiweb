@@ -36,12 +36,6 @@ const AboutMe = forwardRef<HTMLDivElement>((props, ref) => {
             If you are interested in my work, please feel free to contact me at <a className='text-indigo-300' href='mailto:sunny.yuan0333@gmail.com'>sunny.yuan0333@gmail.com</a>.
           </p>
         </div>
-
-        {/* Photo image hidden if mobile */}
-        <div className='hidden lg:block'>
-          <h1 className='text-6xl font-bold mb-6 text-indigo-300'>hehs</h1>
-          {/* <img src={} alt="About Me" /> */}
-        </div>
       </div>
     </div>
   )

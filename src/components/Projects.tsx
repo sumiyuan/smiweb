@@ -8,31 +8,26 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
 
         <div className='flex flex-col items-center justify-center w-full max-w-4xl space-y-8'>
         <JobExperience
-            name="Hong Kong Applied Science and Technology Research Institute"
-            jobTitle="Machine Learning Intern"
-            date="May 2024 - August 2024"
-            location="Hong Kong SAR, China"
+            name="ClimbHub Mobile App"
+            jobTitle="Developer"
+            date="September 2024 - Present"
+            location="Toronto, Canada"
             responsibilities={[
-            "Developed and maintained full-stack web applications using React, Node.js, and TypeScript",
-            "Collaborated with cross-functional teams to implement new features and improve existing functionality",
-            "Optimized database queries and improved application performance by 25%",
-            "Participated in code reviews and contributed to team documentation"
+            "Designed and implemented an all in one competition planning web application using React, and Supabase allowing tournament organizers to easily manage invitation, participant information, and on the day tracking for climbs sent and score",
+            "Designed and deployed mobile application using React Native for competitor on the day climb submission allowing for seamless compatibility and instantaneous rank update"
             ]}
         />
         
         <JobExperience
-            name="University of Toronto RoboCup Team"
-            jobTitle="Software Lead"
-            date="January 2023 - Present"
+            name="CSC301 Project: AI code review agent"
+            jobTitle="Developer"
+            date="September 2024 - January 2025"
             location="Toronto, Canada"
             responsibilities={[
-            "Built responsive web applications using modern JavaScript frameworks",
-            "Implemented RESTful APIs and integrated third-party services",
-            "Worked with version control systems and participated in agile development processes",
-            "Debugged and resolved technical issues across multiple platforms"
+            "Led a 8 person software team to implement a code review command line algorithm using JavaScript that utilized Cohere AI to standardize code within client company Ollon to be used by 30+ employees.",
+            "Developed and deployed various features requested by Ollon on Heroku using React for client verification and internal testing.",
+            "Implemented functionality with scalability in mind, able to be scaled with more functionality with additional use cases."
             ]}
-            liveLink="https://www.robocup.ca/"
-            githubLink="https://github.com/toronto-robotics"
         />
         </div>
     </div>
