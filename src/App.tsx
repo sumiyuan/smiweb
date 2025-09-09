@@ -80,7 +80,7 @@ const App = () => {
   }, [])
 
   return (
-    <div className='font-montserrat bg-slate-950 min-h-screen'>
+    <div className='font-montserrat bg-slate-950 min-h-screen overflow-x-hidden'>
       {/* <div style={{ width: '100%', height: '600px', position: 'relative'}}>
         <DarkVeil bgColor="bg-slate-950"/>
       </div> */}
