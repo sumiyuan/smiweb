@@ -14,11 +14,11 @@ const JobExperience = forwardRef<HTMLDivElement, JobExperienceProps>(({ name, jo
   return (
     <div ref={ref} className='bg-white/5 backdrop-blur-sm rounded-lg p-6 mb-8 border border-indigo-300/20 max-w-2xl'>
       <div className='mb-4'>
-        <div className='flex justify-between items-center mb-1 mx-0.5'>
+        <div className='flex justify-between items-center mb-1 mx-0.5 gap-4'>
           <h3 className='text-2xl font-bold text-indigo-300 mb-2'>{name}</h3>
           <p className='text-indigo-300/80 text-lg'>{location}</p>
         </div>
-        <div className='flex justify-between items-center mb-1'>
+        <div className='flex justify-between items-center mb-1 gap-4'>
           <h4 className='text-xl font-semibold text-white'>{jobTitle}</h4>
           <p className='text-indigo-300/80 text-lg'>{date}</p>
         </div>

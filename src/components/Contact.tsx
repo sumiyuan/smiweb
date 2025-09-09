@@ -42,7 +42,7 @@ const Contact = forwardRef<HTMLDivElement>((_, ref) => {
     const [, formAction] = useActionState(sendEmail, null)
 
   return (
-    <div ref={ref} className="h-screen w-full flex flex-col items-center justify-center">
+    <div ref={ref} className="min-h-screen w-full flex flex-col items-center justify-center py-8">
       <h1 className="text-4xl font-bold text-indigo-300">Let's Connect</h1>
       <p className="text-lg text-white px-4">
         Feel free to reach out to me via email or connect with me on LinkedIn for a coffee chat.

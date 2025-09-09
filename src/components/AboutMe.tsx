@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
 
   return (
-    <div ref={ref} className='h-screen w-full pt-20 relative'>
+    <div ref={ref} className='min-h-screen w-full pt-20 pb-8 relative'>
       {/* Section Banner */}
       {/* <div className='hidden md:flex top-0 left-0 w-full lg:h-25 md:h-20 bg-slate-900/40 backdrop-blur-sm absolute z-10 justify-center items-center'>
         <h2 className='text-2xl font-semibold text-slate-800/90'>
